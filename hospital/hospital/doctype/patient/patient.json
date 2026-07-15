@@ -2,35 +2,81 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "creation": "2026-07-14 18:41:44.621311",
+ "autoname": "PAT-.YYYY.-.#####",
+ "creation": "2026-07-15 15:44:29.275991",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "patient_section",
-  "name1",
+  "section_break_6zqs",
+  "patient_name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "contact_information_section",
+  "phone",
   "address",
-  "allergies",
-  "patient_id"
+  "column_break_t4ey",
+  "email",
+  "medical_information_section",
+  "blood_group",
+  "insurance_available",
+  "insurance_number",
+  "column_break_22va",
+  "primary_doctor"
  ],
  "fields": [
   {
-   "fieldname": "patient_section",
+   "fieldname": "section_break_6zqs",
    "fieldtype": "Section Break",
-   "label": "Patient"
+   "label": "Basic Information"
   },
   {
-   "fieldname": "name1",
+   "bold": 1,
+   "fieldname": "patient_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name",
-   "options": "Name",
+   "label": "Patient Name",
    "reqd": 1
   },
   {
-   "fieldname": "allergies",
-   "fieldtype": "Table",
-   "label": "Allergies",
-   "options": "Patient Allergy"
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther"
+  },
+  {
+   "fieldname": "contact_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_t4ey",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
   },
   {
    "fieldname": "address",
@@ -38,18 +84,48 @@
    "label": "Address"
   },
   {
-   "fieldname": "patient_id",
-   "fieldtype": "Int",
-   "label": "Patient ID"
+   "fieldname": "medical_information_section",
+   "fieldtype": "Section Break",
+   "label": "Medical Information"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "A+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_22va",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "primary_doctor",
+   "fieldtype": "Data",
+   "label": "Primary Doctor"
+  },
+  {
+   "default": "0",
+   "fieldname": "insurance_available",
+   "fieldtype": "Check",
+   "label": "Insurance Available"
+  },
+  {
+   "depends_on": "eval:doc.insurance_available==1",
+   "fieldname": "insurance_number",
+   "fieldtype": "Data",
+   "label": "Insurance Number",
+   "mandatory_depends_on": "eval:doc.insurance_available==1"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-14 19:04:12.107953",
+ "modified": "2026-07-15 16:07:58.929321",
  "modified_by": "Administrator",
  "module": "Hospital",
  "name": "Patient",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -69,5 +145,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

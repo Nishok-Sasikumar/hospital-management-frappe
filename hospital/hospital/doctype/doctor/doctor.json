@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "DOC-.YYYY.-.#####",
+ "creation": "2026-07-15 16:12:53.450068",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_iewd",
+  "doctor_name",
+  "column_break_nx8c",
+  "department",
+  "gender",
+  "professional_information_section",
+  "experience",
+  "column_break_aypk",
+  "consultation_fee",
+  "available",
+  "contact_information_section",
+  "phone",
+  "column_break_dxma",
+  "email",
+  "documents_section",
+  "doctor_photo",
+  "medical_license",
+  "additional_information_section",
+  "biography"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_iewd",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "bold": 1,
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Doctor Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nx8c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "professional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Professional Information"
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Int",
+   "label": "Experience"
+  },
+  {
+   "fieldname": "column_break_aypk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultation_fee",
+   "fieldtype": "Currency",
+   "label": "Consultation Fee"
+  },
+  {
+   "default": "1",
+   "fieldname": "available",
+   "fieldtype": "Check",
+   "label": "Available"
+  },
+  {
+   "fieldname": "contact_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dxma",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "doctor_photo",
+   "fieldtype": "Attach Image",
+   "label": "Doctor Photo"
+  },
+  {
+   "fieldname": "medical_license",
+   "fieldtype": "Attach",
+   "label": "Medical License"
+  },
+  {
+   "fieldname": "additional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "biography",
+   "fieldtype": "Text Editor",
+   "label": "Biography"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-15 16:42:26.593480",
+ "modified_by": "Administrator",
+ "module": "Hospital",
+ "name": "Doctor",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -2,44 +2,81 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "creation": "2026-07-14 18:54:52.778501",
+ "creation": "2026-07-15 14:31:35.059980",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "hospital_settings_section",
+  "general_information_section",
   "hospital_name",
-  "address",
   "phone",
+  "column_break_peel",
+  "registration_number",
   "email",
+  "address_information_section",
+  "address",
+  "branding_section",
   "hospital_logo",
-  "emergency_number"
+  "column_break_mwhu",
+  "primary_color",
+  "working_hours_section",
+  "opening_time",
+  "column_break_o4oh",
+  "closing_time"
  ],
  "fields": [
   {
-   "fieldname": "hospital_settings_section",
+   "fieldname": "general_information_section",
    "fieldtype": "Section Break",
-   "label": "Hospital Settings"
+   "label": "General Information"
   },
   {
+   "bold": 1,
    "fieldname": "hospital_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Hospital Name"
   },
   {
-   "fieldname": "address",
-   "fieldtype": "Small Text",
-   "label": "Address"
+   "fieldname": "column_break_peel",
+   "fieldtype": "Column Break"
   },
   {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number",
+   "reqd": 1
+  },
+  {
+   "description": "Enter the hospital's contact number",
    "fieldname": "phone",
    "fieldtype": "Phone",
-   "label": "Phone"
+   "label": "Phone",
+   "reqd": 1
   },
   {
+   "description": "Official hospital Email",
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
-   "options": "Email"
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address_information_section",
+   "fieldtype": "Section Break",
+   "label": "Address Information"
+  },
+  {
+   "description": "Upload Hospital Logo",
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branding_section",
+   "fieldtype": "Section Break",
+   "label": "Branding"
   },
   {
    "fieldname": "hospital_logo",
@@ -47,16 +84,40 @@
    "label": "Hospital Logo"
   },
   {
-   "fieldname": "emergency_number",
-   "fieldtype": "Phone",
-   "label": "Emergency Number"
+   "fieldname": "column_break_mwhu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "#1976D2",
+   "fieldname": "primary_color",
+   "fieldtype": "Color",
+   "label": "Primary Color"
+  },
+  {
+   "fieldname": "working_hours_section",
+   "fieldtype": "Section Break",
+   "label": "Working Hours"
+  },
+  {
+   "fieldname": "opening_time",
+   "fieldtype": "Time",
+   "label": "Opening Time"
+  },
+  {
+   "fieldname": "column_break_o4oh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "closing_time",
+   "fieldtype": "Time",
+   "label": "Closing Time"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-07-14 19:01:58.781027",
+ "modified": "2026-07-15 17:28:18.147410",
  "modified_by": "Administrator",
  "module": "Hospital",
  "name": "Hospital Settings",
@@ -77,5 +138,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
