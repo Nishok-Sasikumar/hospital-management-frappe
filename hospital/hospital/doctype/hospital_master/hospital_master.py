@@ -1,13 +1,11 @@
 # Copyright (c) 2026, Nishok and contributors
 # For license information, please see license.txt
 
-import frappe
+# import frappe
 from frappe.model.document import Document
-from frappe.utils import validate_email_address
 
-# class HospitalSettings(Document):
-#  	pass
-class HospitalSettings(Document):
+
+class HospitalMaster(Document):
 	def before_save(self):
 		if self.hospital_name:
 			self.hospital_name = self.hospital_name.title()
@@ -16,7 +14,3 @@ class HospitalSettings(Document):
 		if self.phone:
 			if len(self.phone) != 14:
 				frappe.throw("Phone Number must be a 14-digit number.")
-
-#Hospital Settings is a single doctype, so we can get it by name
-# var = frappe.get_doc("Hospital Settings", "Hospital Settings")
-# print(var.hospital_name)

@@ -31,6 +31,7 @@
   {
    "fieldname": "section_break_iewd",
    "fieldtype": "Section Break",
+   "in_preview": 1,
    "label": "Basic Information"
   },
   {
@@ -102,7 +103,8 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
-   "options": "Email"
+   "options": "Email",
+   "sticky": 1
   },
   {
    "fieldname": "documents_section",
@@ -133,8 +135,8 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-15 16:42:26.593480",
- "modified_by": "Administrator",
+ "modified": "2026-07-22 12:41:58.492214",
+ "modified_by": "nishok2005kuro@gmail.com",
  "module": "Hospital",
  "name": "Doctor",
  "naming_rule": "By \"Naming Series\" field",
@@ -155,6 +157,7 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_preview_popup": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []

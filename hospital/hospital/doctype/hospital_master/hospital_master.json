@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "HM-.YYYY.-.#####",
+ "creation": "2026-07-16 12:06:14.202381",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ttkj",
+  "full_name",
+  "age",
+  "height",
+  "salary",
+  "rating",
+  "column_break_fa4j",
+  "employee_code",
+  "gender",
+  "weight",
+  "percentage",
+  "active",
+  "date_information_section",
+  "date_of_birth",
+  "login_time",
+  "column_break_ynvc",
+  "appointment_time",
+  "duration",
+  "contact_section",
+  "phone",
+  "website",
+  "biography",
+  "column_break_wyoi",
+  "email",
+  "address",
+  "relationships_section",
+  "department",
+  "dynamic_doctype",
+  "column_break_hrxd",
+  "doctor",
+  "dynamic_record",
+  "upload_fields_section",
+  "profile_image",
+  "resume",
+  "signature",
+  "location_section",
+  "current_location",
+  "display_section",
+  "theme_color",
+  "ui_icon",
+  "barcode_value"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_ttkj",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "bold": 1,
+   "description": "Patient Full Name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "placeholder": "Enter Full Name...",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fa4j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "EMP-001",
+   "fieldname": "employee_code",
+   "fieldtype": "Data",
+   "label": "Employee Code",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "18",
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "reqd": 1
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height",
+   "precision": "2"
+  },
+  {
+   "default": "1000",
+   "fieldname": "salary",
+   "fieldtype": "Currency",
+   "label": "Salary"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight",
+   "precision": "2"
+  },
+  {
+   "fieldname": "date_information_section",
+   "fieldtype": "Section Break",
+   "label": "Date Information"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "appointment_time",
+   "fieldtype": "Time",
+   "label": "Appointment Time"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "login_time",
+   "fieldtype": "Datetime",
+   "label": "Login Time"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Working Duration"
+  },
+  {
+   "fieldname": "column_break_ynvc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
+  },
+  {
+   "fieldname": "column_break_wyoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "biography",
+   "fieldtype": "Text Editor",
+   "label": "Biography",
+   "sticky": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "max_height": "200px"
+  },
+  {
+   "fieldname": "relationships_section",
+   "fieldtype": "Section Break",
+   "label": "Relationships"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Doctor"
+  },
+  {
+   "fieldname": "dynamic_doctype",
+   "fieldtype": "Link",
+   "label": "Dynamic DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "dynamic_record",
+   "fieldtype": "Dynamic Link",
+   "label": "Dynamic Record",
+   "options": "dynamic_doctype"
+  },
+  {
+   "fieldname": "column_break_hrxd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "upload_fields_section",
+   "fieldtype": "Section Break",
+   "label": "Upload Fields"
+  },
+  {
+   "fieldname": "profile_image",
+   "fieldtype": "Attach Image",
+   "label": "Profile Image"
+  },
+  {
+   "fieldname": "resume",
+   "fieldtype": "Attach",
+   "label": "Resume"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "Geolocation",
+   "label": "Current Location"
+  },
+  {
+   "fieldname": "display_section",
+   "fieldtype": "Section Break",
+   "label": "Display"
+  },
+  {
+   "fieldname": "theme_color",
+   "fieldtype": "Color",
+   "label": "Theme Color"
+  },
+  {
+   "fieldname": "ui_icon",
+   "fieldtype": "Icon",
+   "label": "UI Icon"
+  },
+  {
+   "fieldname": "barcode_value",
+   "fieldtype": "Button",
+   "label": "Barcode Value"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-21 15:30:11.010795",
+ "modified_by": "nishok2005kuro@gmail.com",
+ "module": "Hospital",
+ "name": "Hospital Master",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

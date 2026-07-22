@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-07-20 18:43:23.099640",
+ "default_view": "Calendar",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "doctor_schedule_section",
+  "doctor",
+  "start_time",
+  "end_time",
+  "schedule_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctor_schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Doctor Schedule"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "schedule_type",
+   "fieldtype": "Select",
+   "label": "Schedule Type",
+   "options": "OPD\nSurgery\nEmergency\nWard Round"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2026-07-21 10:49:45.942295",
+ "modified_by": "Administrator",
+ "module": "Hospital",
+ "name": "Doctor Schedule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "restrict_to_domain": "Manager",
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
