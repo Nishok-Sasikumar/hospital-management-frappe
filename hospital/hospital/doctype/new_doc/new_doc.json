@@ -1,49 +1,36 @@
 {
  "actions": [],
  "allow_bulk_edit": 1,
- "allow_events_in_timeline": 1,
  "allow_rename": 1,
- "creation": "2026-07-21 11:26:49.672215",
+ "creation": "2026-07-23 16:27:03.935748",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_bvnk",
-  "column_break_pefw",
-  "name1",
+  "has_pan",
   "new_name"
  ],
  "fields": [
   {
-   "fieldname": "section_break_bvnk",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name",
-   "no_copy": 1,
-   "permlevel": 1
-  },
-  {
-   "fieldname": "column_break_pefw",
-   "fieldtype": "Column Break",
-   "options": "Tamil\nHINDI"
-  },
-  {
+   "default": " ",
    "fieldname": "new_name",
    "fieldtype": "Data",
-   "label": "New Name"
+   "label": "PAN Number",
+   "read_only_depends_on": "eval:doc.has_pan == \"YES\";"
+  },
+  {
+   "fieldname": "has_pan",
+   "fieldtype": "Select",
+   "label": "Do you have PAN Card ?",
+   "options": "\nYES\nNO"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2026-07-23 22:05:07.443002",
+ "modified": "2026-07-23 16:50:01.951673",
  "modified_by": "Administrator",
  "module": "Hospital",
- "name": "Domain Test",
- "naming_rule": "By fieldname",
+ "name": "new Doc",
  "owner": "Administrator",
  "permissions": [
   {
@@ -59,7 +46,6 @@
    "write": 1
   }
  ],
- "route": "route",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",

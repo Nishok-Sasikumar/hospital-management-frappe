@@ -7,7 +7,22 @@ app_license = "mit"
 
 # Apps
 # ------------------
-
+# fixtures = [
+#     {
+#         "dt": "Property Setter",
+#         "filters": [["doc_type", "in", ["Cus 1", "Event Notifications"]]]
+#     },
+#     {
+#         "dt": "Custom Field",
+#         "filters": [["dt", "in", ["Cus 1", "Event Notifications"]]]
+#     }
+# ]
+fixtures = [
+    {
+        "dt" : "",
+        "" : ""
+    }
+]
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
