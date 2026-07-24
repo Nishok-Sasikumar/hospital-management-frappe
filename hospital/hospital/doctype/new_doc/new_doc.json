@@ -6,28 +6,33 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "first_name",
   "has_pan",
-  "new_name"
+  "pan_number"
  ],
  "fields": [
-  {
-   "default": " ",
-   "fieldname": "new_name",
-   "fieldtype": "Data",
-   "label": "PAN Number",
-   "read_only_depends_on": "eval:doc.has_pan == \"YES\";"
-  },
   {
    "fieldname": "has_pan",
    "fieldtype": "Select",
    "label": "Do you have PAN Card ?",
-   "options": "\nYES\nNO"
+   "options": "YES\nNO"
+  },
+  {
+   "default": " ",
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "first name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-23 16:50:01.951673",
+ "modified": "2026-07-24 15:16:39.125359",
  "modified_by": "Administrator",
  "module": "Hospital",
  "name": "new Doc",
