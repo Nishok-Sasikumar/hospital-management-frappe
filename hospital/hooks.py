@@ -4,7 +4,8 @@ app_publisher = "Nishok"
 app_description = "Hospital Management System"
 app_email = "nishok2005kuro@gmail.com"
 app_license = "mit"
-
+# hooks.py
+export_python_type_annotations = True
 # Apps
 # ------------------
 # fixtures = [
@@ -17,12 +18,9 @@ app_license = "mit"
 #         "filters": [["dt", "in", ["Cus 1", "Event Notifications"]]]
 #     }
 # ]
-fixtures = [
-    {
-        "dt" : "",
-        "" : ""
-    }
-]
+
+
+# app_include_js = "custom_desk.bundle.js"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
