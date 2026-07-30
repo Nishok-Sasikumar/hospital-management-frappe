@@ -4,8 +4,7 @@ app_publisher = "Nishok"
 app_description = "Hospital Management System"
 app_email = "nishok2005kuro@gmail.com"
 app_license = "mit"
-# hooks.py
-export_python_type_annotations = True
+# hooks.pyx
 # Apps
 # ------------------
 # fixtures = [
@@ -19,7 +18,24 @@ export_python_type_annotations = True
 #     }
 # ]
 
+# hospital/hooks.py
 
+# doc_events = {
+#     "Patient": {
+#         "before_naming": "hospital.hospital.patient_lifecycle.custom_before_naming",
+#         "autoname": "hospital.hospital.patient_lifecycle.custom_autoname",
+#         "before_insert": "hospital.hospital.patient_lifecycle.set_default_patient_data",
+#         "validate": "hospital.hospital.patient_lifecycle.validate_patient_info",
+#         "before_save": "hospital.hospital.patient_lifecycle.final_patient_cleanup",
+#         "after_insert": "hospital.hospital.patient_lifecycle.log_new_patient_creation"
+#     }
+# }
+
+doc_events = {
+    "Test Document": {
+        "validate": "hospital.hospital.api.custom_logic"
+    }
+}
 # app_include_js = "custom_desk.bundle.js"
 # required_apps = []
 
@@ -258,7 +274,7 @@ export_python_type_annotations = True
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
+export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
