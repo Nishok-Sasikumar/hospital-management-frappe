@@ -18,6 +18,15 @@ app_license = "mit"
 #     }
 # ]
 
+
+
+portal_menu_items = [
+    {"title": "Dashboard", "route": "/dashboard", "role": "Customer"},
+    {"title": "Orders", "route": "/orders", "role": "Customer"},
+]
+
+
+
 # hospital/hooks.py
 
 # doc_events = {
@@ -31,11 +40,13 @@ app_license = "mit"
 #     }
 # }
 
-doc_events = {
-    "Test Document": {
-        "validate": "hospital.hospital.api.custom_logic"
-    }
-}
+
+
+# doc_events = {
+#     "Patient": {
+#         "validate": "hospital.hospital.api.custom_logic"
+#     }
+# }
 # app_include_js = "custom_desk.bundle.js"
 # required_apps = []
 
@@ -274,7 +285,7 @@ doc_events = {
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-export_python_type_annotations = True
+#export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
