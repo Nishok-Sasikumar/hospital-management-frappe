@@ -1,9 +1,9 @@
 # Copyright (c) 2026, Nishok and contributors
 # For license information, please see license.txt
 
-import frappe
+# import frappe
 from frappe.model.document import Document
 
 
-class PatientAppointment(Document):
+class HospitalSignupRequest(Document):
 	pass

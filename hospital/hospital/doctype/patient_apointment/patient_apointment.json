@@ -2,20 +2,20 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "creation": "2026-08-05 10:45:25.437395",
+ "creation": "2026-08-05 10:42:52.660351",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_7lhv",
+  "section_break_ca6n",
   "amended_from",
-  "doctor",
-  "schedule_date",
-  "start_time",
-  "end_time"
+  "patient",
+  "doctor_schedule",
+  "appointment_date",
+  "status"
  ],
  "fields": [
   {
-   "fieldname": "section_break_7lhv",
+   "fieldname": "section_break_ca6n",
    "fieldtype": "Section Break"
   },
   {
@@ -23,41 +23,43 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Doctor Schedule",
+   "options": "Patient Apointment",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
   },
   {
-   "fieldname": "doctor",
+   "fieldname": "patient",
    "fieldtype": "Link",
-   "label": "Doctor",
-   "options": "Doctor"
+   "label": "Patient",
+   "options": "Patient"
   },
   {
-   "fieldname": "schedule_date",
+   "fieldname": "doctor_schedule",
+   "fieldtype": "Link",
+   "label": "Doctor Schedule",
+   "options": "Doctor Schedule"
+  },
+  {
+   "fieldname": "appointment_date",
    "fieldtype": "Date",
-   "label": "Schedule Date"
+   "label": "Appointment Date"
   },
   {
-   "fieldname": "start_time",
-   "fieldtype": "Time",
-   "label": "Start Time"
-  },
-  {
-   "fieldname": "end_time",
-   "fieldtype": "Time",
-   "label": "End Time"
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nCompleted\nCancelled"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-08-05 10:52:45.878012",
+ "modified": "2026-08-05 10:52:53.194244",
  "modified_by": "Administrator",
  "module": "Hospital",
- "name": "Doctor Schedule",
+ "name": "Patient Apointment",
  "owner": "Administrator",
  "permissions": [
   {

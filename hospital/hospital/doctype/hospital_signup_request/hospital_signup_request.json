@@ -2,20 +2,21 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "creation": "2026-08-05 10:45:25.437395",
+ "creation": "2026-08-04 11:54:25.592202",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_7lhv",
+  "section_break_nzmm",
   "amended_from",
-  "doctor",
-  "schedule_date",
-  "start_time",
-  "end_time"
+  "email",
+  "full_name",
+  "phone_number",
+  "department",
+  "status"
  ],
  "fields": [
   {
-   "fieldname": "section_break_7lhv",
+   "fieldname": "section_break_nzmm",
    "fieldtype": "Section Break"
   },
   {
@@ -23,45 +24,56 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Doctor Schedule",
+   "options": "Hospital Signup Request",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
   },
   {
-   "fieldname": "doctor",
-   "fieldtype": "Link",
-   "label": "Doctor",
-   "options": "Doctor"
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
   },
   {
-   "fieldname": "schedule_date",
-   "fieldtype": "Date",
-   "label": "Schedule Date"
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
   },
   {
-   "fieldname": "start_time",
-   "fieldtype": "Time",
-   "label": "Start Time"
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
   },
   {
-   "fieldname": "end_time",
-   "fieldtype": "Time",
-   "label": "End Time"
+   "fieldname": "department",
+   "fieldtype": "Select",
+   "label": "Department",
+   "options": "General Medicine\nPediatrics\nCardiology\nOrthopedics"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nApproved\nRejected"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-08-05 10:52:45.878012",
+ "modified": "2026-08-04 11:59:59.948650",
  "modified_by": "Administrator",
  "module": "Hospital",
- "name": "Doctor Schedule",
+ "name": "Hospital Signup Request",
  "owner": "Administrator",
  "permissions": [
   {
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,

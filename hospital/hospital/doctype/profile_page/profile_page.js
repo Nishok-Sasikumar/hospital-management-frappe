@@ -1,7 +1,7 @@
 // Copyright (c) 2026, Nishok and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Doctor Schedule", {
+// frappe.ui.form.on("Profile Page", {
 // 	refresh(frm) {
 
 // 	},

@@ -4,9 +4,22 @@ app_publisher = "Nishok"
 app_description = "Hospital Management System"
 app_email = "nishok2005kuro@gmail.com"
 app_license = "mit"
+
+
+
 # hooks.pyx
 # Apps
 # ------------------
+
+# additional_timeline_content: {
+#     "ToDo": ["hospital.timeline.todo_timeline"]
+# }
+
+
+
+# has_permission = {
+#     "Cus_1": "hospital.permissions.cus_1_has_permission",
+# }
 # fixtures = [
 #     {
 #         "dt": "Property Setter",
@@ -20,12 +33,123 @@ app_license = "mit"
 
 
 
-portal_menu_items = [
-    {"title": "Dashboard", "route": "/dashboard", "role": "Customer"},
-    {"title": "Orders", "route": "/orders", "role": "Customer"},
+# extend_doctype_class = {
+#     "Doctor": ["hospital.extensions.doctor.DoctorMixin"],
+# }
+
+
+
+# on_login = "hospital.overrides.successful_login"
+# on_session_creation = "app.overrides.allocate_free_credits"
+# on_logout = "app.overrides.clear_user_cache"
+
+# doctype_js = {
+#     "ToDo": "public/js/todo.js",
+# }
+
+# auto_cancel_exempted_doctypes = ["Patient Apointment"]
+
+
+
+# web_include_js = "assets/hospital/js/app.js"
+# web_include_css = "assets/hospital/css/app.css"
+
+
+
+# after_build = "studio.build.after_build"
+
+
+
+# website_redirects = [
+#     {"source": "/compare", "target": "/comparison"},
+#     {"source": "/docs(/.*)?", "target": "https://docs.tennismart.com\\1"},
+#     {"source": r"/items/item\?item_name=(.*)", "target": "/items/\\1", "match_with_query_string": True},
+# ]   
+
+# website_route_rules = [
+#     {"from_route": "/items/<item_name>", "to_route": "items"},
+# ]
+   
+
+# extend_website_page_controller_context = {
+#     "frappe.www.404": "hospital.templates.context_404"
+# }
+
+# website_context = {
+#     "favicon": "/assets/app/image/favicon.png",
+#     "splash_image": "/assets/app/image/splash.png"
+# }
+
+# update_website_context = "app.overrides.website_context"
+
+# webform_include_js = {"Nishok": "public/js/custom_todo.js"}
+# webform_include_css = {"Nishok": "public/css/custom_todo.css"}
+
+# ignore_links_on_delete = ["Doctor Schedule"]
+
+# hospital/hospital/hooks.py
+# signup_form_template = "hospital/templates/signup-form.html"
+# app/hooks.py
+# website_context = {
+#     "favicon": "/assets/hospital/image/Wallpaper.png"
+# }
+# update_website_context = "app.overrides.website_context"
+
+
+
+# sounds = [
+#     {"name": "ping", "src": "/assets/hospital/sounds/error.mp3", "volume": 1}
+# ]
+
+
+
+# web_include_js = "/assets/hospital/js/app.js"
+# web_include_css = "/assets/hospital/css/app.css"
+
+
+
+# webform_include_js = {"nishok": "/assets/hospital/js/custom_todo.js"}
+# webform_include_css = {"nishok": "/assets/hospital/css/custom_todo.css"}
+
+
+
+# hospital/hospital/hooks.py
+
+# extend_website_page_controller_context = {
+#     "frappe.www.404": "hospital.pages.context_404",
+#     "frappe.www.about": "hospital.pages.context_about"
+# }
+# python module path
+# extend_bootinfo = "hospital.boot.boot_session"
+
+# hospital/hospital/hooks.py
+
+# brand_html = '<div><img src="/assets/hospital/image/Wallpaper.png" style="height: 30px; margin-right: 5px;"> Nishok</div>'
+
+# hospital/hooks.py
+
+
+
+user_data_fields = [
+    {
+        "doctype": "Patient",
+        "filter_by": "email",
+        "redact_fields": ["phone"],
+    },
 ]
 
+# send_sms = "hospital.overrides.sms.send_sms"
+# send_token_via_sms = "hospital.overrides.sms.send_token_via_sms"
+# app_logo_url ="Cover.png"
+# app_title = "Hospital"
 
+calendars = ["Cus_1","Doctor"]
+
+# after_build = "hospital.build.after_build"
+# before_migrate = "hospital.migrate.before_migrate"
+# after_migrate = "hospital.migrate.after_migrate"
+
+# website_clear_cache = "hospital.website.clear_cache"
 
 # hospital/hooks.py
 

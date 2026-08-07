@@ -10,7 +10,8 @@
   "section_break_bvnk",
   "column_break_pefw",
   "name1",
-  "new_name"
+  "new_name",
+  "linked_to"
  ],
  "fields": [
   {
@@ -33,13 +34,19 @@
    "fieldname": "new_name",
    "fieldtype": "Data",
    "label": "New Name"
+  },
+  {
+   "fieldname": "linked_to",
+   "fieldtype": "Link",
+   "label": "linked to ",
+   "options": "Doctor"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2026-07-23 22:05:07.443002",
+ "modified": "2026-08-05 17:15:16.707351",
  "modified_by": "Administrator",
  "module": "Hospital",
  "name": "Domain Test",
