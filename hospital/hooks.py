@@ -16,7 +16,9 @@ app_license = "mit"
 # }
 
 
-
+# base_template_map = {
+#     r"docs.*": "templates/doc_base.html",
+# }
 # has_permission = {
 #     "Cus_1": "hospital.permissions.cus_1_has_permission",
 # }

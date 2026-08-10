@@ -1,0 +1,26 @@
+{% extends "templates/web.html" %}
+
+{% block header %}
+  <div class="docs-header">
+    <h2>{{ title }}</h2>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="docs-layout">
+    <aside class="docs-sidebar">
+      {% include "templates/includes/sidebar.html" ignore missing %}
+    </aside>
+    <main class="docs-content">
+      {{ content }}
+    </main>
+  </div>
+{% endblock %}
+
+{% block style %}
+  <style>
+    .docs-layout { display: flex; gap: 2rem; }
+    .docs-sidebar { width: 220px; }
+    .docs-content { flex: 1; }
+  </style>
+{% endblock %}
