@@ -2,7 +2,7 @@ import frappe
 from frappe.model.document import Document
 
 
-class DoctorMixin(Document):
+class Doctor(Document):
 
     @property
     def doctor_summary(self):
@@ -16,5 +16,8 @@ class DoctorMixin(Document):
             frappe.throw("Please set a Consultation Fee before marking this doctor as Available.")
 
     def validate(self):
-        super().validate()          # let the robot do its normal checks first
-        self.custom_validation()    # then run our extra check
+        self.custom_validation()    # run our extra check
+
+    def on_trash(self):
+        if self.available == 1:
+            frappe.throw("Cannot delete an available doctor. Mark the doctor as unavailable first.")

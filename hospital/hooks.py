@@ -19,8 +19,13 @@ app_license = "mit"
 # base_template_map = {
 #     r"docs.*": "templates/doc_base.html",
 # }
+
+# get_site_info = "hospital.utils.get_extra_site_info"
 # has_permission = {
 #     "Cus_1": "hospital.permissions.cus_1_has_permission",
+# }
+# permission_query_conditions = {
+#     "Cus_1": "hospital.permissions.cus_1_query_conditions",
 # }
 # fixtures = [
 #     {
@@ -87,7 +92,7 @@ app_license = "mit"
 # webform_include_js = {"Nishok": "public/js/custom_todo.js"}
 # webform_include_css = {"Nishok": "public/css/custom_todo.css"}
 
-# ignore_links_on_delete = ["Doctor Schedule"]
+ignore_links_on_delete = ["Domain Test","Doctor Schedule","Patient Apointment","Patient","Cus 1"]
 
 # hospital/hospital/hooks.py
 # signup_form_template = "hospital/templates/signup-form.html"
@@ -132,20 +137,20 @@ app_license = "mit"
 
 
 
-user_data_fields = [
-    {
-        "doctype": "Patient",
-        "filter_by": "email",
-        "redact_fields": ["phone"],
-    },
-]
+# user_data_fields = [
+#     {
+#         "doctype": "Patient",
+#         "filter_by": "email",
+#         "redact_fields": ["phone"],
+#     },
+# ]
 
 # send_sms = "hospital.overrides.sms.send_sms"
 # send_token_via_sms = "hospital.overrides.sms.send_token_via_sms"
 # app_logo_url ="Cover.png"
 # app_title = "Hospital"
 
-calendars = ["Cus_1","Doctor"]
+# calendars = ["Cus_1","Doctor"]
 
 # after_build = "hospital.build.after_build"
 # before_migrate = "hospital.migrate.before_migrate"
