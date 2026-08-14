@@ -101,8 +101,9 @@
   },
   {
    "fieldname": "primary_doctor",
-   "fieldtype": "Data",
-   "label": "Primary Doctor"
+   "fieldtype": "Link",
+   "label": "Primary Doctor",
+   "options": "Doctor"
   },
   {
    "default": "0",
@@ -121,8 +122,8 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-22 12:28:09.177459",
- "modified_by": "nishok2005kuro@gmail.com",
+ "modified": "2026-08-13 14:27:56.289925",
+ "modified_by": "Administrator",
  "module": "Hospital",
  "name": "Patient",
  "naming_rule": "By \"Naming Series\" field",

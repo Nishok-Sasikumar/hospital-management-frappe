@@ -1,6 +1,7 @@
 # Copyright (c) 2026, Nishok and contributors
 # For license information, please see license.txt
 import frappe
+import os
 from frappe.model.document import Document
 class Doctor(Document):
 
@@ -12,6 +13,19 @@ class Doctor(Document):
     def custom_validation(self):
         if self.available and not self.consultation_fee:
             frappe.throw("Please set a Consultation Fee before marking this doctor as Available.")
+
+    def write_file(self):
+        folder = frappe.get_site_path('private', 'files', 'doctor_notes')
+        os.makedirs(folder, exist_ok=True)
+        self._file_path = os.path.join(folder, f"{self.name}.txt")
+        with open(self._file_path, 'w') as f:
+            f.write(f"Welcome, Dr. {self.doctor_name}!")
+        print(f"[write_file] File created at {self._file_path}")
+
+    def delete_file(self):
+        if hasattr(self, '_file_path') and os.path.exists(self._file_path):
+            os.remove(self._file_path)
+            print(f"[delete_file] File removed: {self._file_path}")
 
     def before_insert(self):
         if self.doctor_name:
@@ -33,6 +47,7 @@ class Doctor(Document):
 
     def printhello(self):
         return 10
+
     def before_save(self):
         if self.experience and self.experience >= 10:
             current_fee = self.consultation_fee or 0
@@ -42,6 +57,9 @@ class Doctor(Document):
 
     def after_insert(self):
         frappe.msgprint(f"Doctor {self.doctor_name} has been registered successfully.")
+        self.write_file()
+        frappe.db.after_rollback.add(self.delete_file)
+        frappe.db.after_commit.add(lambda: print(f"[after_commit] {self.name} is now permanently saved."))
 
     def on_update(self):
         frappe.logger().info(f"Doctor {self.name} updated by {frappe.session.user}")

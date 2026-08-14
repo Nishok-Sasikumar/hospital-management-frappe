@@ -4,4 +4,5 @@ frappe.pages['hospital-dashboard'].on_page_load = function(wrapper) {
 		title: 'None',
 		single_column: true
 	});
+	page.set_title_sub('Hospital Dashboard');
 }
