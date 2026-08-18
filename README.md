@@ -13,3 +13,7 @@ Hospital Management System
 ### Files
 - `app/hospital/hospital/hospital/tasks.py`
 - `app/hospital/hospital/hooks.py`
+## Assignment 8: Utilities (frappe.utils), Jinja API, Routing & Rendering & Search API
+
+### Files
+- `app/hospital/hospital/hospital/api.py`
