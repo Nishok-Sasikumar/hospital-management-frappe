@@ -8,3 +8,8 @@ Hospital Management System
 
 ### Files
 - `app/hospital/hospital/hospital/api.py`
+## Assignment 6:Background Jobs
+
+### Files
+- `app/hospital/hospital/hospital/tasks.py`
+- `app/hospital/hospital/hooks.py`
