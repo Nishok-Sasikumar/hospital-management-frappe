@@ -1,4 +1,3 @@
-# hospital/hospital/api.py
 import frappe
 from frappe import _, qb
 
@@ -6,7 +5,6 @@ from frappe import _, qb
 @frappe.whitelist()
 def get_doctors_with_owner_info(limit: int = 5):
 
-    # QUERY BUILDER — join Doctor with User (via the owner field)
     Doctor = qb.DocType("Doctor")
     User = qb.DocType("User")
 
@@ -32,13 +30,11 @@ def get_doctors_with_owner_info(limit: int = 5):
     if not results:
         return {"message": "No Doctor records found", "data": []}
 
-    # DOCUMENT API — fetch one record, update a field, save it
     first_doctor_name = results[0]["name"]
     doc = frappe.get_doc("Doctor", first_doctor_name)
     doc.biography = (doc.biography or "") + " [Synced via API]"
     doc.save(ignore_permissions=True)
 
-    # DATABASE API — bulk update across ALL fetched records, bypassing validations
     all_names = [row["name"] for row in results]
     frappe.db.set_value(
         "Doctor",
@@ -59,11 +55,6 @@ def get_doctors_with_owner_info(limit: int = 5):
 
 @frappe.whitelist()
 def download_medical_license(doctor_name):
-    """
-    Downloads the medical license file for a specific doctor.
-    Example of a file-download response using Frappe's response system.
-    Requires login (allow_guest removed intentionally — this is sensitive data).
-    """
     if not frappe.db.exists('Doctor', doctor_name):
         frappe.throw(_("Doctor not found"))
 
@@ -90,10 +81,6 @@ def download_medical_license(doctor_name):
 
 @frappe.whitelist()
 def get_recent_todos_with_owner_emails():
-    """
-    Demonstrates frappe.get_list() (permission-aware), frappe.db.get_value()
-    (optimized single-value fetch), and frappe.utils.now() (context-aware timestamp).
-    """
     todos = frappe.get_list(
         "ToDo",
         fields=["name", "description", "owner"],
