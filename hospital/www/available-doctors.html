@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ frappe.lang }}">
+<head>
+    <title>{{ _('Available Doctors') }}</title>
+</head>
+<body>
+    <h1>{{ _('Available Doctors') }}</h1>
+    <p>{{ _('Logged in as') }}: {{ frappe.session.user }}</p>
+
+    {% set dept_filter = frappe.form_dict.department if frappe.form_dict else None %}
+    {% set doctors = frappe.get_all('Doctor', filters={'available': 1, 'department': dept_filter} if dept_filter else {'available': 1}, fields=['doctor_name', 'department', 'experience', 'consultation_fee']) %}
+
+    <form method="get">
+        <input type="text" name="department" placeholder="{{ _('Filter by department') }}" value="{{ dept_filter or '' }}">
+        <button type="submit">{{ _('Filter') }}</button>
+    </form>
+
+    {% if doctors %}
+        {% for doctor in doctors %}
+            <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+                <h3>{{ doctor.doctor_name }}</h3>
+                <p>{{ _('Department') }}: {{ doctor.department or _('Not assigned') }}</p>
+                <p>{{ _('Experience') }}: {{ doctor.experience }} {{ _('years') }}</p>
+                <p>{{ _('Fee') }}: {{ frappe.format(doctor.consultation_fee, {'fieldtype': 'Currency'}) }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>{{ _('No available doctors right now.') }}</p>
+    {% endif %}
+</body>
+</html>

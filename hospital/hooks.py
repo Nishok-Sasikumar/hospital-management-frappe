@@ -15,7 +15,29 @@ app_license = "mit"
 #     "ToDo": ["hospital.timeline.todo_timeline"]
 # }
 
-
+scheduler_events = {
+    "hourly": [
+        "hospital.hospital.tasks.hourly_task"
+    ],
+    "daily": [
+        "hospital.hospital.tasks.daily_task",
+        "hospital.hospital.tasks.daily_maintenance"
+    ],
+    "weekly": [
+        "hospital.hospital.tasks.weekly_task"
+    ],
+    "monthly": [
+        "hospital.hospital.tasks.monthly_task"
+    ],
+    "daily_long": [
+        "hospital.hospital.tasks.daily_long_task"
+    ],
+    "cron": {
+        "*/6 * * * *": [
+            "hospital.hospital.tasks.every_six_minutes_task"
+        ]
+    }
+}
 # base_template_map = {
 #     r"docs.*": "templates/doc_base.html",
 # }

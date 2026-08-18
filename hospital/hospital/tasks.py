@@ -20,3 +20,12 @@ def daily_long_task():
 
 def every_six_minutes_task():
     frappe.logger().info("Runs every 6 minutes")
+# hospital/hospital/tasks.py
+import frappe
+
+
+def daily_maintenance():
+    frappe.log_error(
+        title="Daily Maintenance",
+        message="Daily maintenance job executed successfully."
+    )

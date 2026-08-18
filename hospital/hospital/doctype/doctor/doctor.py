@@ -3,6 +3,8 @@
 import frappe
 import os
 from frappe.model.document import Document
+
+
 class Doctor(Document):
 
     @property
@@ -61,9 +63,33 @@ class Doctor(Document):
         frappe.db.after_rollback.add(self.delete_file)
         frappe.db.after_commit.add(lambda: print(f"[after_commit] {self.name} is now permanently saved."))
 
+
+        frappe.publish_realtime('new_doctor_registered', {
+            'name': self.name,
+            'doctor_name': self.doctor_name,
+            'department': self.department
+        })
+        frappe.publish_progress(25,title="Doctor Registration", description=f"Doctor {self.doctor_name} registered successfully.")
+
     def on_update(self):
         frappe.logger().info(f"Doctor {self.name} updated by {frappe.session.user}")
+        frappe.publish_realtime('doctor_updated', {
+            'name': self.name,
+            'doctor_name': self.doctor_name,
+            'consultation_fee': self.consultation_fee
+        })
 
     def on_trash(self):
         if self.available == 1:
             frappe.throw("Cannot delete an available doctor. Mark the doctor as unavailable first.")
+
+    def send_reminder_email(self, message="Reminder"):
+        if not self.email:
+            frappe.log_error(f"No email set for Doctor {self.name}")
+            return
+        frappe.sendmail(
+            recipients=[self.email],
+            subject="Reminder for Dr. " + self.doctor_name,
+            message=message
+        )
+        frappe.logger().info(f"Reminder email sent to {self.email} for {self.name}")

@@ -6,3 +6,6 @@
 
 // 	},
 // });
+frappe.realtime.on('new_doctor_registered', (data) => {
+    console.log('New doctor:', data.name, data.doctor_name, data.department);
+});
