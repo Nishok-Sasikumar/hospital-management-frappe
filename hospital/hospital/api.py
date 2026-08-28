@@ -98,3 +98,12 @@ def get_recent_todos_with_owner_emails():
         "timestamp": timestamp,
         "records": todos
     }
+
+
+
+@frappe.whitelist()
+def create_doctor(doctor_name):
+    doctor = frappe.new_doc('Doctor')
+    doctor.doctor_name = doctor_name
+    doctor.save()
+    return doctor.name

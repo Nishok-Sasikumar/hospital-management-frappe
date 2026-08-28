@@ -2,9 +2,8 @@
 # For license information, please see license.txt
 
 # import frappe
-from frappe.model.document import Document
+from frappe.utils.nestedset import NestedSet
 
 
-class Cus_1(Document):
+class NewTree(NestedSet):
 	pass
-

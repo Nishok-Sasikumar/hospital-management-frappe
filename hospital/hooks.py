@@ -5,9 +5,19 @@ app_description = "Hospital Management System"
 app_email = "nishok2005kuro@gmail.com"
 app_license = "mit"
 
+# your_app/hooks.py
+
+doc_events = {
+    "DocType": {
+        "on_update": [
+            "hospital.hospital.utils.doctype_hooks.create_list_js_boilerplate",
+            "hospital.hospital.utils.doctype_hooks.create_web_view_templates",
+        ]
+    }
+}
 
 
-# hooks.pyx
+# hooks.py
 # Apps
 # ------------------
 
@@ -15,29 +25,29 @@ app_license = "mit"
 #     "ToDo": ["hospital.timeline.todo_timeline"]
 # }
 
-scheduler_events = {
-    "hourly": [
-        "hospital.hospital.tasks.hourly_task"
-    ],
-    "daily": [
-        "hospital.hospital.tasks.daily_task",
-        "hospital.hospital.tasks.daily_maintenance"
-    ],
-    "weekly": [
-        "hospital.hospital.tasks.weekly_task"
-    ],
-    "monthly": [
-        "hospital.hospital.tasks.monthly_task"
-    ],
-    "daily_long": [
-        "hospital.hospital.tasks.daily_long_task"
-    ],
-    "cron": {
-        "*/6 * * * *": [
-            "hospital.hospital.tasks.every_six_minutes_task"
-        ]
-    }
-}
+# scheduler_events = {
+#     "hourly": [
+#         "hospital.hospital.tasks.hourly_task"
+#     ],
+#     "daily": [
+#         "hospital.hospital.tasks.daily_task",
+#         "hospital.hospital.tasks.daily_maintenance"
+#     ],
+#     "weekly": [
+#         "hospital.hospital.tasks.weekly_task"
+#     ],
+#     "monthly": [
+#         "hospital.hospital.tasks.monthly_task"
+#     ],
+#     "daily_long": [
+#         "hospital.hospital.tasks.daily_long_task"
+#     ],
+#     "cron": {
+#         "*/6 * * * *": [
+#             "hospital.hospital.tasks.every_six_minutes_task"
+#         ]
+#     }
+# }
 # base_template_map = {
 #     r"docs.*": "templates/doc_base.html",
 # }
@@ -114,7 +124,7 @@ scheduler_events = {
 # webform_include_js = {"Nishok": "public/js/custom_todo.js"}
 # webform_include_css = {"Nishok": "public/css/custom_todo.css"}
 
-ignore_links_on_delete = ["Domain Test","Doctor Schedule","Patient Apointment","Patient","Cus 1"]
+# ignore_links_on_delete = ["Domain Test","Doctor Schedule","Patient Apointment","Patient","Cus 1"]
 
 # hospital/hospital/hooks.py
 # signup_form_template = "hospital/templates/signup-form.html"

@@ -8,7 +8,10 @@
  "field_order": [
   "select",
   "second_name",
-  "child_table"
+  "child_table",
+  "sec_section",
+  "heck",
+  "realtime_chart"
  ],
  "fields": [
   {
@@ -27,12 +30,27 @@
    "fieldtype": "Table",
    "label": "child table",
    "options": "cus_child"
+  },
+  {
+   "fieldname": "sec_section",
+   "fieldtype": "Section Break",
+   "label": "sec"
+  },
+  {
+   "fieldname": "heck",
+   "fieldtype": "Data",
+   "label": "heck"
+  },
+  {
+   "fieldname": "realtime_chart",
+   "fieldtype": "HTML",
+   "label": "Realtime Chart"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-12 16:14:11.059051",
+ "modified": "2026-08-24 14:34:58.253209",
  "modified_by": "Administrator",
  "module": "Hospital",
  "name": "Cus_1",

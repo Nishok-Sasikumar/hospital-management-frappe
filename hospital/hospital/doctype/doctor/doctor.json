@@ -26,7 +26,8 @@
   "medical_license",
   "additional_information_section",
   "biography",
-  "last_synced_on"
+  "last_synced_on",
+  "due_date"
  ],
  "fields": [
   {
@@ -135,12 +136,17 @@
    "fieldtype": "Datetime",
    "label": "Last Synced On",
    "read_only": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-14 18:12:37.646652",
+ "modified": "2026-08-20 15:54:26.180240",
  "modified_by": "Administrator",
  "module": "Hospital",
  "name": "Doctor",

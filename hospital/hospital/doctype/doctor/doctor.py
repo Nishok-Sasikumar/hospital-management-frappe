@@ -69,7 +69,7 @@ class Doctor(Document):
             'doctor_name': self.doctor_name,
             'department': self.department
         })
-        frappe.publish_progress(25,title="Doctor Registration", description=f"Doctor {self.doctor_name} registered successfully.")
+        # frappe.publish_progress(25,title="Doctor Registration", description=f"Doctor {self.doctor_name} registered successfully.")
 
     def on_update(self):
         frappe.logger().info(f"Doctor {self.name} updated by {frappe.session.user}")
@@ -93,3 +93,18 @@ class Doctor(Document):
             message=message
         )
         frappe.logger().info(f"Reminder email sent to {self.email} for {self.name}")
+
+    # frm.call use this method to get upcoming schedules for the doctor(for this it should require a doctoe schedule)
+    @frappe.whitelist()
+    def get_upcoming_schedule(self):
+        schedules = frappe.get_all(
+            'Doctor Schedule',
+            filters={
+                'doctor': self.name,
+                'schedule_date': ['>=', frappe.utils.today()],
+                'docstatus': 1
+            },
+            fields=['name', 'schedule_date', 'start_time', 'end_time'],
+            order_by='schedule_date asc'
+        )
+        return schedules
