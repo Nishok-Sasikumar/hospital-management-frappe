@@ -17,3 +17,11 @@ Hospital Management System
 
 ### Files
 - `app/hospital/hospital/hospital/api.py`
+
+## Assignment 9: frappe.call, frappe.msgprint, frappe.ui.form & frappe.model
+
+### Files
+- `app/hospital/hospital/hospital/api.py`
+- `apps/hospital/hospital/hospital/doctype/doctor/doctor.js`
+- <img width="1897" height="967" alt="image" src="https://github.com/user-attachments/assets/a54eeb2b-5f2b-49d4-bead-cbf2a59a7db6" />
+
