@@ -33,7 +33,14 @@ Hospital Management System
 - <img width="743" height="196" alt="image" src="https://github.com/user-attachments/assets/5dd3758e-ef15-41ec-9809-4cadc5a80dca" />
 
 ## Assignment : Data Import (Web UI), Data Import (CLI), Export to Excel & Data Migration Tool
-[Uploading Customer.csv…]()
+
+"ID","Customer Name","Customer Type","Customer Group","Territory"
+"CUST-001","Arun Kumar","Company","Commercial","India"
+"CUST-002","Priya Stores","Company","Commercial","India"
+"CUST-003","Karthik Enterprises","Company","Commercial","India"
+"CUST-004","Meena Traders","Company","Commercial","India"
+"CUST-005","Siva Industries","Company","Commercial","India"
+
 <img width="1638" height="976" alt="image" src="https://github.com/user-attachments/assets/4ed4c977-868b-43f2-b1cf-0a82df9420d6" />
 <img width="1586" height="895" alt="image" src="https://github.com/user-attachments/assets/4f6aaac6-d773-4025-b097-6de1b8bb3782" />
 
