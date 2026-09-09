@@ -32,4 +32,9 @@ Hospital Management System
 - `apps\hospital\hospital\hooks.py`
 - <img width="743" height="196" alt="image" src="https://github.com/user-attachments/assets/5dd3758e-ef15-41ec-9809-4cadc5a80dca" />
 
+## Assignment : Data Import (Web UI), Data Import (CLI), Export to Excel & Data Migration Tool
+[Uploading Customer.csv…]()
+<img width="1638" height="976" alt="image" src="https://github.com/user-attachments/assets/4ed4c977-868b-43f2-b1cf-0a82df9420d6" />
+<img width="1586" height="895" alt="image" src="https://github.com/user-attachments/assets/4f6aaac6-d773-4025-b097-6de1b8bb3782" />
+
 
