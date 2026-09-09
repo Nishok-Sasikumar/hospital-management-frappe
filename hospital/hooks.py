@@ -16,6 +16,9 @@ doc_events = {
     }
 }
 
+commands = [
+    "hospital.commands"
+]
 
 # hooks.py
 # Apps
