@@ -44,4 +44,14 @@ Hospital Management System
 <img width="1638" height="976" alt="image" src="https://github.com/user-attachments/assets/4ed4c977-868b-43f2-b1cf-0a82df9420d6" />
 <img width="1586" height="895" alt="image" src="https://github.com/user-attachments/assets/4f6aaac6-d773-4025-b097-6de1b8bb3782" />
 
+## Assignment : Development Guides Part 1
+
+### Files
+- `apps/hospital/hospital/fixtures/client_script.json`
+- `apps\hospital\hospital\hooks.py`
+- <img width="1908" height="983" alt="image" src="https://github.com/user-attachments/assets/a92b8a7d-63cd-4fb9-b04f-10ff6e6407a2" />
+
+
+
+
 
