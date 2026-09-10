@@ -51,6 +51,13 @@ Hospital Management System
 - `apps\hospital\hospital\hooks.py`
 - <img width="1908" height="983" alt="image" src="https://github.com/user-attachments/assets/a92b8a7d-63cd-4fb9-b04f-10ff6e6407a2" />
 
+## Assignment :Additional Features and Advanced Topics
+
+### Files
+- `local-bench\apps\hospital\hospital\hospital\api.py`
+- <img width="1898" height="692" alt="image" src="https://github.com/user-attachments/assets/fe9110e2-cc40-48d1-9841-431d9ff3f24e" />
+
+
 
 
 
