@@ -15,7 +15,7 @@ doc_events = {
         ]
     }
 }
-
+fixtures = ["Client Script"]
 commands = [
     "hospital.commands"
 ]

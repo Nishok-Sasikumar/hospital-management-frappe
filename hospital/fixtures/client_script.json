@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Patient",
+  "enabled": 0,
+  "modified": "2026-08-18 14:59:28.784397",
+  "module": "Hospital",
+  "name": "client script",
+  "script": "frappe.ui.form.on('Patient', {\r\n    refresh: (frm) => {\r\n        // Play a sound effect (e.g., ping.mp3)\r\n        frappe.utils.play_sound(\"ping\")\r\n        audio.play().catch(err => {\r\n            console.warn('Audio playback failed:', err);\r\n        });\r\n\r\n        // Show a message\r\n        frappe.msgprint({\r\n            title: 'Patient Form Refreshed',\r\n            message: 'A sound has been played.',\r\n            indicator: 'blue'\r\n        });\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "User",
+  "enabled": 1,
+  "modified": "2026-09-10 12:50:36.547936",
+  "module": "Hospital",
+  "name": "Development Guide",
+  "script": "frappe.ui.form.on('User', {\r\n    refresh(frm) {\r\n        frm.add_custom_button('Send Welcome Email', () => {\r\n            frappe.msgprint('Email Sent!');\r\n        }, 'Actions');\r\n    }\r\n});",
+  "view": "Form"
+ }
+]
