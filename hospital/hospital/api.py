@@ -107,3 +107,13 @@ def create_doctor(doctor_name):
     doctor.doctor_name = doctor_name
     doctor.save()
     return doctor.name
+
+
+from frappe.rate_limiter import rate_limit
+@frappe.whitelist(allow_guest=True)
+@rate_limit(limit=5, seconds=60)
+def limited_greeting():
+    logger = frappe.logger()
+    logger.info("Endpoint called.")
+
+    frappe.response["message"] = "Hello, Rate Limited World!"
